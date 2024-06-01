@@ -26,6 +26,7 @@ public class TestShoppingDemo {
 
     @Test
     public void test() throws InterruptedException {
+    	
         // Click on Jewelry option
         driver.findElement(By.xpath("/html/body/div[4]/div[1]/div[4]/div[1]/div[1]/div[2]/ul/li[6]/a")).click();
 
@@ -48,9 +49,11 @@ public class TestShoppingDemo {
         // Shopping cart
         driver.findElement(By.xpath("//*[@id=\"topcartlink\"]/a/span[1]")).click();
 
+
         // Agree button
         driver.findElement(By.id("termsofservice")).click();
-
+        
+        
         // Read TC
         driver.findElement(By.className("read")).click();
 
@@ -86,7 +89,6 @@ public class TestShoppingDemo {
         driver.findElement(By.id("BillingNewAddress_ZipPostalCode")).sendKeys("138156");
         driver.findElement(By.id("BillingNewAddress_PhoneNumber")).sendKeys("9044520329");
         driver.findElement(By.xpath("//*[@id='billing-buttons-container']/input")).click();
-
         Thread.sleep(3000);
         // Shipping address
         driver.findElement(By.xpath("//*[@id=\"shipping-buttons-container\"]/input")).click();
